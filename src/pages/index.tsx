@@ -3,17 +3,16 @@ import Image from "next/image";
 import Link from "next/link";
 import ExImage from "./arrow.png";
 import ExImage2 from "./Qmark.png";
-import BrowseAll from "../app.feature/group/component/browseAll";
 
 export default function Home() {
   return (
     <Main>
-      <Link href="#">
-        <Image src={ExImage} layout="responsive" width={20} height={20} />
+      <Link href={'/'} passHref>
+        <ButtonLink><Image src={ExImage} alt="뒤로가기" /></ButtonLink>
       </Link>
       <span>그룹</span>
-      <Link href="#">
-        <Image src={ExImage2} layout="responsive" width={20} height={20} />
+      <Link href={'/'} passHref>
+        <ButtonLink><Image src={ExImage2} alt="도움말" /></ButtonLink>
       </Link>
     </Main>
   );
@@ -21,7 +20,7 @@ export default function Home() {
 
 const Main = styled.div`
   width: 720px;
-  height: 40px;
+  line-height: 40px;
   margin-top: 0;
   color: #996633;
   font-weight: bold;
@@ -29,7 +28,13 @@ const Main = styled.div`
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  position: relative;
   display: grid;
   grid-template-columns: repeat(3, 60px 600px 60px);
+`;
+
+const ButtonLink = styled.a`
+  color: #996633;
+  width: 20px;
+  height: 20px;
+  margin: auto;
 `;
