@@ -1,8 +1,12 @@
+import NavBar from "../screen/navbar";
+import SearchBar from "../screen/searchBar";
+
+
 export default function browseAll() {
   return (
     <div>
-      <p>전체보기</p>
-      <button>필터</button>
+      <NavBar />
+      <SearchBar />
     </div>
   );
 }
