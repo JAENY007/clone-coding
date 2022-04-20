@@ -7,11 +7,11 @@ import ExImage2 from "./Qmark.png";
 export default function Home() {
   return (
     <Main>
-      <Link href={'/'} passHref>
+      <Link href={""} passHref>
         <ButtonLink><Image src={ExImage} alt="뒤로가기" /></ButtonLink>
       </Link>
       <span>그룹</span>
-      <Link href={'/'} passHref>
+      <Link href={""} passHref>
         <ButtonLink><Image src={ExImage2} alt="도움말" /></ButtonLink>
       </Link>
     </Main>
