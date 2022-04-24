@@ -1,24 +1,27 @@
 import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
-import ExImage from "./arrow.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ExImage2 from "./Qmark.png";
+import { faArrowLeft, faCircleQuestion } from "@fortawesome/free-solid-svg-icons";
 
-export default function Home() {
+const Page_Home = () => {
   return (
-    <Main>
-      <Link href={""} passHref>
-        <ButtonLink><Image src={ExImage} alt="뒤로가기" /></ButtonLink>
+    <StyledWrapper>
+      <Link href={"#"} passHref>
+        <Button><FontAwesomeIcon icon={faArrowLeft} /></Button>
       </Link>
       <span>그룹</span>
-      <Link href={""} passHref>
-        <ButtonLink><Image src={ExImage2} alt="도움말" /></ButtonLink>
+      <Link href={"#"} passHref>
+        <Button><FontAwesomeIcon icon={faCircleQuestion} /></Button>
       </Link>
-    </Main>
+    </StyledWrapper>
   );
 }
 
-const Main = styled.div`
+export default Page_Home;
+
+const StyledWrapper = styled.div`
   width: 720px;
   line-height: 40px;
   margin-top: 0;
@@ -32,9 +35,8 @@ const Main = styled.div`
   grid-template-columns: repeat(3, 60px 600px 60px);
 `;
 
-const ButtonLink = styled.a`
+const Button = styled.button`
   color: #996633;
-  width: 20px;
-  height: 20px;
-  margin: auto;
+  font-size: 20px;
+  text-decoration: none;
 `;
